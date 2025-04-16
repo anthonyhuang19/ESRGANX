@@ -11,13 +11,11 @@ This repository encapsulates comprehensive experiments focused on adapting **Enh
 ## Contents 🗂️
 - `esrgan.ipynb`: Full training/evaluation pipeline
 - `report.pdf`: Detailed methodology and results
-- `requirements.txt`: Python dependencies
 
 ## Installation 🚀
 ```bash
 git clone https://github.com/anthonyhuang19/Adapting-ESRGAN-for-Enhanced-Super-Resolution-Experiments.git
 cd Adapting-ESRGAN-for-Enhanced-Super-Resolution-Experiments
-pip install -r requirements.txt
 ```
 ## 🛠️ Tools & Technologies Used
 
@@ -52,17 +50,6 @@ We evaluate model performance using standard metrics:
 
 Additionally, visual comparisons are made between the model's output and ground truth images.
 
-## 📊 Results
-
-The following table compares the performance of our optimized ESRGAN model against the baseline model using standard metrics:
-
-| Metric | Baseline | Our Model |
-|--------|----------|-----------|
-| PSNR   | 28.6     | 30.2      |
-| SSIM   | 0.82     | 0.87      |
-
-As shown, our model demonstrates a significant improvement in both PSNR and SSIM, confirming the enhancements in image quality.
-
 ## 🤝 Contributing
 
 We welcome contributions to this project! To get involved:
@@ -71,10 +58,6 @@ We welcome contributions to this project! To get involved:
 3. **Submit a Pull Request**.
 
 Feel free to report any issues or suggestions for improvement in the Issues tab.
-
-## 📜 License
-
-This project is licensed under the MIT License. Feel free to use, modify, and distribute the code, but please credit the authors.
 
 ## 📧 Contact
 
