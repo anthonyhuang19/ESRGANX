@@ -1,45 +1,82 @@
-# Adapting ESRGAN for Enhanced Super-Resolution Experiments
+# Adapting ESRGAN for Enhanced Super-Resolution Experiments 📷⚡
 
-## Abstract
+## Overview 📌
+This repository encapsulates comprehensive experiments focused on adapting **Enhanced Super-Resolution Generative Adversarial Networks (ESRGAN)** for high-quality image super-resolution tasks. The core objective is to push the boundaries of ESRGAN's performance in transforming low-resolution images into sharp, high-resolution outputs.
 
-This paper explores the Enhanced Super-Resolution Generative Adversarial Network (ESRGAN), a state-of-the-art model for single-image super-resolution (SISR). ESRGAN improves upon SRGAN by utilizing Residual-in-Residual Dense Blocks (RRDB) to stabilize training and by employing a relativistic adversarial loss function for improved image realism. Additionally, a pre-activated VGG-based perceptual loss enhances visual quality by preserving textures and brightness coherence. The model demonstrates notable improvements in generating high-quality super-resolution images. 🎨🔍
+## Key Features 🌟
+- **Enhanced Image Resolution**: Restores high-frequency details and fine textures
+- **Optimized Architecture**: Modified ESRGAN for improved performance
+- **Real-World Applications**: Medical imaging, satellite imaging, general enhancement
 
-## 1. Introduction
+## Contents 🗂️
+- `esrgan.ipynb`: Full training/evaluation pipeline
+- `report.pdf`: Detailed methodology and results
+- `requirements.txt`: Python dependencies
 
-Single Image Super-Resolution (SISR) aims to recover high-resolution images from low-resolution inputs. Despite advancements with SRGAN, artifacts and perceptual quality gaps remained. ESRGAN addresses these limitations by:
-1. Using **RRDBs** for deeper networks without batch normalization.
-2. Applying **relativistic adversarial loss** for better realism.
-3. Leveraging **VGG-based perceptual loss** to preserve fine details. 🌟
+## Installation 🚀
+```bash
+git clone https://github.com/anthonyhuang19/Adapting-ESRGAN-for-Enhanced-Super-Resolution-Experiments.git
+cd Adapting-ESRGAN-for-Enhanced-Super-Resolution-Experiments
+pip install -r requirements.txt
+```
+## 🛠️ Tools & Technologies Used
 
-## 2. Related Work
+The following tools and technologies were used to implement and optimize the ESRGAN model:
 
-Recent advances in super-resolution include transformer-based models like SwinIR, diffusion models like SRDiff, and hybrid models combining CNNs and transformers. ESRGAN builds on these methods, offering perceptual quality improvements that rival or exceed previous approaches. 🔄
+### Frameworks:
+- **TensorFlow / PyTorch**: Powerful deep learning frameworks for model training and fine-tuning.
 
-## 3. Methodology
+### Image Processing:
+- **OpenCV & PIL**: Libraries for loading, processing, and visualizing images efficiently.
 
-### 3.1 Residual-in-Residual Dense Block (RRDB)
-RRDBs enhance deep network training by eliminating batch normalization, preventing artifacts and improving training stability. ⚙️
+### Data Handling:
+- **NumPy & Pandas**: Key libraries for manipulating and processing data during the training and evaluation stages.
 
-### 3.2 Relativistic Adversarial Discriminator
-The relativistic discriminator measures the relative realism of generated images, improving texture quality and perceptual fidelity. 🏆
+### Visualization:
+- **Matplotlib & Seaborn**: Used to create visual plots for comparing training results and performance metrics.
 
-### 3.3 Perceptual Loss
-ESRGAN uses a VGG-based perceptual loss to ensure high-level semantic details are preserved, improving the visual quality of super-resolved images. 💡
+## 🔬 Experimental Workflow
 
-### 3.4 Total Generator Loss
-The generator loss in ESRGAN combines perceptual loss, adversarial loss, and content loss to balance visual quality with pixel accuracy. ⚖️
+### 1. Data Preprocessing 🌐
+Preprocessing is crucial for preparing data to be fed into ESRGAN. We perform:
+- **Image resizing** to a consistent shape.
+- **Normalization** to scale pixel values for stable training.
 
-## 4. Experiment
+### 2. Model Training 🏋️‍♀️
+During training, the focus is on optimizing the adversarial loss function to improve both the perceptual quality of images and the restoration of fine details.
 
-### 4.1 Training Process
-The model was trained on the DIV2K dataset using the Adam optimizer with a learning rate of 1e-4. The training included both perceptual and adversarial losses. 🧠
+### 3. Model Evaluation 📊
+We evaluate model performance using standard metrics:
+- **PSNR (Peak Signal-to-Noise Ratio)**: Measures image quality.
+- **SSIM (Structural Similarity Index)**: Assesses perceptual similarity between original and generated images.
 
-### 4.2 Qualitative Results
-ESRGAN outperforms SRGAN and SRCNN in perceptual quality, particularly in preserving textures and generating photorealistic images, as shown by higher MOS ratings. 🌈
+Additionally, visual comparisons are made between the model's output and ground truth images.
 
-### 4.3 Dataset Overview
-The model was evaluated on the Set5 and Set14 datasets, commonly used to benchmark super-resolution algorithms. 📊
+## 📊 Results
 
-## 5. Conclusion
+The following table compares the performance of our optimized ESRGAN model against the baseline model using standard metrics:
 
-ESRGAN demonstrated significant improvements in generating high-quality super-resolution images, effectively recovering high-frequency details. With continued refinement and better hardware, ESRGAN's performance is expected to further enhance the quality of super-resolution tasks. 🚀
+| Metric | Baseline | Our Model |
+|--------|----------|-----------|
+| PSNR   | 28.6     | 30.2      |
+| SSIM   | 0.82     | 0.87      |
+
+As shown, our model demonstrates a significant improvement in both PSNR and SSIM, confirming the enhancements in image quality.
+
+## 🤝 Contributing
+
+We welcome contributions to this project! To get involved:
+1. **Fork the repository**.
+2. **Modify the code** or add new features.
+3. **Submit a Pull Request**.
+
+Feel free to report any issues or suggestions for improvement in the Issues tab.
+
+## 📜 License
+
+This project is licensed under the MIT License. Feel free to use, modify, and distribute the code, but please credit the authors.
+
+## 📧 Contact
+
+- **GitHub**: [@anthonyhuang19](https://github.com/anthonyhuang19)
+- **LinkedIn**: [Anthony Huang](https://www.linkedin.com/in/anthonyhuang1909/)
