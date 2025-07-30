@@ -4,9 +4,12 @@
 This repository encapsulates comprehensive experiments focused on adapting **Enhanced Super-Resolution Generative Adversarial Networks (ESRGAN)** for high-quality image super-resolution tasks. The core objective is to push the boundaries of ESRGAN's performance in transforming low-resolution images into sharp, high-resolution outputs.
 
 ## Key Features 🌟
-- **Enhanced Image Resolution**: Restores high-frequency details and fine textures
-- **Optimized Architecture**: Modified ESRGAN for improved performance
-- **Real-World Applications**: Medical imaging, satellite imaging, general enhancement
+- 🧠 **From-Scratch Implementation**  
+  Built without using pretrained weights or third-party ESRGAN frameworks.
+- 🎨 **Enhanced Image Resolution**  
+  Effectively restores textures, edges, and fine details in degraded images.
+- ⚙️ **Optimized Architecture**  
+  Based on Residual-in-Residual Dense Blocks (RRDB), with refinements for training stability and output quality.
 
 ## Contents 🗂️
 - `esrgan.ipynb`: Full training/evaluation pipeline
@@ -15,23 +18,33 @@ This repository encapsulates comprehensive experiments focused on adapting **Enh
 ## Installation 🚀
 ```bash
 git clone https://github.com/anthonyhuang19/Adapting-ESRGAN-for-Enhanced-Super-Resolution-Experiments.git
-cd Adapting-ESRGAN-for-Enhanced-Super-Resolution-Experiments
+cd ESRGANX
 ```
-## 🛠️ Tools & Technologies Used
+## 🛠️ Tools & Technologies
 
-The following tools and technologies were used to implement and optimize the ESRGAN model:
+The development and optimization of **ESRGAN-X** leveraged a modern deep learning stack, including tools for model training, image manipulation, data processing, and performance visualization.
 
-### Frameworks:
-- **TensorFlow / PyTorch**: Powerful deep learning frameworks for model training and fine-tuning.
+### ⚙️ Frameworks
+- **PyTorch**  
+  Used as the primary deep learning framework for building, training, and evaluating the ESRGAN architecture. Offers dynamic computation graphs and robust GPU acceleration.
 
-### Image Processing:
-- **OpenCV & PIL**: Libraries for loading, processing, and visualizing images efficiently.
+### 🖼️ Image Processing
+- **OpenCV**  
+  Employed for efficient image manipulation, resizing, augmentation, and file I/O.
+- **Pillow (PIL)**  
+  Used alongside OpenCV for flexible image loading and pixel-level preprocessing.
 
-### Data Handling:
-- **NumPy & Pandas**: Key libraries for manipulating and processing data during the training and evaluation stages.
+### 📊 Data Handling
+- **NumPy**  
+  Fundamental for tensor operations, array transformations, and efficient numerical computation.
+- **Pandas**  
+  Utilized for organizing metadata, managing experiment logs, and tracking training statistics.
 
-### Visualization:
-- **Matplotlib & Seaborn**: Used to create visual plots for comparing training results and performance metrics.
+### 📈 Visualization & Monitoring
+- **Matplotlib**  
+  Used to plot training curves (loss, PSNR, SSIM) and visualize sample outputs.
+- **Seaborn**  
+  Enhances Matplotlib aesthetics for better interpretability of trends and performance metrics.
 
 ## 🔬 Experimental Workflow
 
@@ -60,6 +73,4 @@ We welcome contributions to this project! To get involved:
 Feel free to report any issues or suggestions for improvement in the Issues tab.
 
 ## 📧 Contact
-
 - **GitHub**: [@anthonyhuang19](https://github.com/anthonyhuang19)
-- **LinkedIn**: [Anthony Huang](https://www.linkedin.com/in/anthonyhuang1909/)
